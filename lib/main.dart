@@ -2,6 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'views/dash_board_view.dart';
+
 void main() {
   runApp(
     DevicePreview(
@@ -19,24 +21,12 @@ class ResponsiveDashBoard extends StatelessWidget {
     return MaterialApp(
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: HomeView(),
+      home: DashBoardView(),
     );
   }
 }
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Responsive text example'),
-      ),
-      body:
-    );
-  }
-}
 
 // double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
 //   double scaleFactor = getScaleFactor(context);
