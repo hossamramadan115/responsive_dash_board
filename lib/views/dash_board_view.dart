@@ -7,11 +7,11 @@ class DashBoardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Responsive text example',
-        ),
-      ),
+      // appBar: AppBar(
+      //   title: Text(
+      //     'Responsive text example',
+      //   ),
+      // ),
       body: DashBoardViewBody(),
     );
   }
