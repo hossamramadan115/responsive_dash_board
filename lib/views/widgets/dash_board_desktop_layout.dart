@@ -1,3 +1,4 @@
+import 'package:dashboard_app/utils/app_images.dart';
 import 'package:flutter/cupertino.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
@@ -5,6 +6,6 @@ class DashBoardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Image.asset(Assets.imagesCardBackground,height: 100,);
   }
 }

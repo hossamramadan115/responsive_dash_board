@@ -26,8 +26,6 @@ class ResponsiveDashBoard extends StatelessWidget {
   }
 }
 
-
-
 // double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
 //   double scaleFactor = getScaleFactor(context);
 //   double responsiveFontSize = fontSize * scaleFactor;

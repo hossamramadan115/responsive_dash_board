@@ -8,9 +8,11 @@ class DashBoardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Responsive text example'),
+        title: Text(
+          'Responsive text example',
+        ),
       ),
-      body:DashBoardViewBody(),
+      body: DashBoardViewBody(),
     );
   }
 }
