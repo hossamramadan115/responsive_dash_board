@@ -1,3 +1,4 @@
+import 'package:dashboard_app/views/widgets/all_expense.dart';
 import 'package:dashboard_app/views/widgets/custom_drawer.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -12,9 +13,10 @@ class DashBoardDesktopLayout extends StatelessWidget {
           flex: 1,
           child: CustomDrawer(),
         ),
+        SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: Container(),
+          child: AllExpenses(),
         ),
         Expanded(
           flex: 2,
