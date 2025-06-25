@@ -1,5 +1,5 @@
 import 'package:dashboard_app/views/widgets/all_expenses_header.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dashboard_app/views/widgets/all_expenses_item_list_view.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -18,6 +18,8 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           AllExpensesHeader(),
+          const SizedBox(height: 16),
+          AllExpensesItemListView(),
         ],
       ),
     );
