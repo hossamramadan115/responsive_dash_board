@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../models/all_expenses_item_model.dart';
 import '../../utils/app_images.dart';
 
-class AllExpensesItemListView extends StatelessWidget {
+class AllExpensesItemListView extends StatefulWidget {
   const AllExpensesItemListView({super.key});
   static const items = [
     AllExpensesItemModel(
@@ -28,24 +28,56 @@ class AllExpensesItemListView extends StatelessWidget {
   ];
 
   @override
+  State<AllExpensesItemListView> createState() =>
+      _AllExpensesItemListViewState();
+}
+
+class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+  int activeIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Row(
-      children:
-          // items.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
-          items.asMap().entries.map((e) {
+      children: AllExpensesItemListView.items.asMap().entries.map((e) {
         int index = e.key;
         var items = e.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(itemModel: items),
+            child: GestureDetector(
+              onTap: () {
+                onClick(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensesItem(
+                  itemModel: items,
+                  isActive: activeIndex == index,
+                ),
+              ),
             ),
           );
         } else {
-          return Expanded(child: AllExpensesItem(itemModel: items));
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                onClick(index);
+              },
+              child: AllExpensesItem(
+                itemModel: items,
+                isActive: activeIndex == index,
+              ),
+            ),
+          );
         }
       }).toList(),
     );
+  }
+
+  void onClick(int index) {
+    if (activeIndex != index) {
+      return setState(() {
+        activeIndex = index;
+      });
+    }
   }
 }
