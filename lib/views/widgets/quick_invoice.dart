@@ -1,0 +1,20 @@
+import 'package:dashboard_app/views/widgets/custom_back_ground_container.dart';
+import 'package:dashboard_app/views/widgets/latest_transaction.dart';
+import 'package:dashboard_app/views/widgets/quick_invoice_header.dart';
+import 'package:flutter/material.dart';
+
+class QuickInvoice extends StatelessWidget {
+  const QuickInvoice({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomBackGroundContainer(
+      child: Column(
+        children: [
+          QuickInvoiceHeader(),
+          LatestTransaction(),
+        ],
+      ),
+    );
+  }
+}
