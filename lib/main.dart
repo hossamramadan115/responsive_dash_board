@@ -24,5 +24,3 @@ class ResponsiveDashBoard extends StatelessWidget {
     );
   }
 }
-
-
