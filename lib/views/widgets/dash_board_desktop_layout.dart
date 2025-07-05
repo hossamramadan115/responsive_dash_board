@@ -1,8 +1,8 @@
-import 'package:dashboard_app/views/widgets/all_expense.dart';
 import 'package:dashboard_app/views/widgets/all_expenses_and_quick_invoice_saction.dart';
+import 'package:dashboard_app/views/widgets/card.dart';
 import 'package:dashboard_app/views/widgets/custom_drawer.dart';
-import 'package:dashboard_app/views/widgets/quick_invoice.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
   const DashBoardDesktopLayout({super.key});
@@ -15,14 +15,15 @@ class DashBoardDesktopLayout extends StatelessWidget {
           flex: 1,
           child: CustomDrawer(),
         ),
-        SizedBox(width: 32),
+        SizedBox(width: 24),
         Expanded(
           flex: 3,
           child: AllExpensesAndQuickInvoiceSaction(),
         ),
+        SizedBox(width: 24),
         Expanded(
           flex: 2,
-          child: Container(),
+          child: MyCard(),
         ),
       ],
     );
