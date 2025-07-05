@@ -1,4 +1,5 @@
 import 'package:dashboard_app/views/widgets/all_expense.dart';
+import 'package:dashboard_app/views/widgets/all_expenses_and_quick_invoice_saction.dart';
 import 'package:dashboard_app/views/widgets/custom_drawer.dart';
 import 'package:dashboard_app/views/widgets/quick_invoice.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,14 +18,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(child: const SizedBox(height: 40)),
-              SliverToBoxAdapter(child: const AllExpenses()),
-              SliverToBoxAdapter(child: const SizedBox(height: 24)),
-              SliverToBoxAdapter(child: const QuickInvoice()),
-            ],
-          ),
+          child: AllExpensesAndQuickInvoiceSaction(),
         ),
         Expanded(
           flex: 2,
