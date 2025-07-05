@@ -1,7 +1,7 @@
 import 'package:dashboard_app/views/widgets/custom_back_ground_container.dart';
 import 'package:dashboard_app/views/widgets/latest_transaction.dart';
+import 'package:dashboard_app/views/widgets/quick_invoic_form.dart';
 import 'package:dashboard_app/views/widgets/quick_invoice_header.dart';
-import 'package:dashboard_app/views/widgets/title_text_field.dart';
 import 'package:flutter/material.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -18,7 +18,7 @@ class QuickInvoice extends StatelessWidget {
             color: Color(0xFF4DB7F2),
             height: 48,
           ),
-          TitleTextField(title: 'Customer name', hint: 'Type Customer name')
+          QuickInvoicForm(),
         ],
       ),
     );

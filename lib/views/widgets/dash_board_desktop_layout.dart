@@ -17,11 +17,11 @@ class DashBoardDesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: Column(
-            children: [
-              const AllExpenses(),
-              const SizedBox(height: 24),
-              const QuickInvoice(),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: const AllExpenses()),
+              SliverToBoxAdapter(child: const SizedBox(height: 24)),
+              SliverToBoxAdapter(child: const QuickInvoice()),
             ],
           ),
         ),
