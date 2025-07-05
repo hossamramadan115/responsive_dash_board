@@ -1,3 +1,4 @@
+import 'package:dashboard_app/views/widgets/custom_button.dart';
 import 'package:dashboard_app/views/widgets/title_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class QuickInvoicForm extends StatelessWidget {
               child: TitleTextField(
                   title: 'Customer name', hint: 'Type Customer name'),
             ),
-            SizedBox(height: 16),
+            SizedBox(width: 16),
             Expanded(
               child: TitleTextField(
                   title: 'Customer email', hint: 'type customer email'),
@@ -28,9 +29,28 @@ class QuickInvoicForm extends StatelessWidget {
               child: TitleTextField(
                   title: 'Item name', hint: 'Type Customer name'),
             ),
-            SizedBox(height: 16),
+            SizedBox(width: 16),
             Expanded(
               child: TitleTextField(title: 'Item mount', hint: 'USD'),
+            ),
+          ],
+        ),
+        SizedBox(height: 24),
+        Row(
+          children: [
+            Expanded(
+              child: CustomButton(
+                text: 'Add more details',
+                textColor: Color(0xff4db7f2),
+                backgroundColor: Colors.white,
+              ),
+            ),
+            SizedBox(width: 24),
+            Expanded(
+              child: CustomButton(
+                text: 'Send Mony',
+                backgroundColor: Color(0xff4db7f2),
+              ),
             ),
           ],
         ),
