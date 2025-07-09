@@ -3,8 +3,26 @@ import 'package:dashboard_app/views/widgets/dots_indecator.dart';
 import 'package:dashboard_app/views/widgets/my_card_page_view.dart';
 import 'package:flutter/material.dart';
 
-class MyCardsSection extends StatelessWidget {
+class MyCardsSection extends StatefulWidget {
   const MyCardsSection({super.key});
+
+  @override
+  State<MyCardsSection> createState() => _MyCardsSectionState();
+}
+
+class _MyCardsSectionState extends State<MyCardsSection> {
+  late PageController pageController;
+  int currentPage = 0;
+
+  @override
+  void initState() {
+    pageController = PageController();
+    pageController.addListener(() {
+      currentPage = pageController.page!.round();
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +37,13 @@ class MyCardsSection extends StatelessWidget {
           ),
         ),
         SizedBox(height: 20),
-        MyCardPageView(),
+        MyCardPageView(
+          pageController: pageController,
+        ),
         SizedBox(height: 20),
-        DotsIndecator(),
+        DotsIndecator(
+          currentPage: currentPage,
+        ),
       ],
     );
   }
@@ -64,4 +86,3 @@ class MyCardsSection extends StatelessWidget {
 //     );
 //   }
 // }
-
