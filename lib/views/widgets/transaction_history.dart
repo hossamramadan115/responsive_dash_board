@@ -35,6 +35,7 @@ class TransactionHistory extends StatelessWidget {
               fontWeight: FontWeight.w500,
               height: 0),
         ),
+        SizedBox(height: 16),
         TransactionHistoryListView(),
       ],
     );
