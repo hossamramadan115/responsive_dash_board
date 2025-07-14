@@ -4,7 +4,6 @@ import 'package:dashboard_app/utils/app_images.dart';
 import 'package:dashboard_app/views/widgets/active_and_inactive_drawer_item.dart';
 import 'package:dashboard_app/views/widgets/drawer_item_list_view.dart';
 import 'package:dashboard_app/views/widgets/user_info_list_tile.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
