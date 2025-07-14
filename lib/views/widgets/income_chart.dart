@@ -13,23 +13,26 @@ class _IncomeChartState extends State<IncomeChart> {
 
   @override
   Widget build(BuildContext context) {
-    return PieChart(
-      PieChartData(
-        sectionsSpace: 0,
-        pieTouchData: PieTouchData(
-          touchCallback: (event, response) {
-            setState(() {
-              if (!event.isInterestedForInteractions ||
-                  response == null ||
-                  response.touchedSection == null) {
-                touchedIndex = null;
-              } else {
-                touchedIndex = response.touchedSection!.touchedSectionIndex;
-              }
-            });
-          },
+    return AspectRatio(
+      aspectRatio: 1,
+      child: PieChart(
+        PieChartData(
+          sectionsSpace: 0,
+          pieTouchData: PieTouchData(
+            touchCallback: (event, response) {
+              setState(() {
+                if (!event.isInterestedForInteractions ||
+                    response == null ||
+                    response.touchedSection == null) {
+                  touchedIndex = null;
+                } else {
+                  touchedIndex = response.touchedSection!.touchedSectionIndex;
+                }
+              });
+            },
+          ),
+          sections: _buildSections(),
         ),
-        sections: _buildSections(),
       ),
     );
   }
@@ -44,7 +47,7 @@ class _IncomeChartState extends State<IncomeChart> {
 
     return List.generate(data.length, (index) {
       final isTouched = index == touchedIndex;
-      final double radius = isTouched ? 60 : 50;
+      final double radius = isTouched ? 30 : 20;
 
       return PieChartSectionData(
         showTitle: false,

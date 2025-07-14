@@ -2,7 +2,6 @@ import 'package:dashboard_app/views/widgets/all_expenses_and_quick_invoice_sacti
 import 'package:dashboard_app/views/widgets/custom_drawer.dart';
 import 'package:dashboard_app/views/widgets/income_section.dart';
 import 'package:dashboard_app/views/widgets/my_card_and_transaction_history_section.dart';
-import 'package:dashboard_app/views/widgets/transaction_history.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +24,14 @@ class DashBoardDesktopLayout extends StatelessWidget {
         SizedBox(width: 24),
         Expanded(
           flex: 2,
-          // child: MyCardsSection(),
-          child: IncomeSection(),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: SizedBox(height: 40)),
+              SliverToBoxAdapter(child: MyCardAndTransactionHistorySection()),
+              SliverToBoxAdapter(child: SizedBox(height: 16)),
+              SliverFillRemaining(child: IncomeSection()),
+            ],
+          ),
         ),
       ],
     );

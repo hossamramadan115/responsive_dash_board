@@ -11,6 +11,7 @@ class MyCardAndTransactionHistorySection extends StatelessWidget {
     return CustomBackGroundContainer(
       child: Column(
         children: [
+          SizedBox(height: 40),
           MyCardsSection(),
           Divider(
             height: 40,
