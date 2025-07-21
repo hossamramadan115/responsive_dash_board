@@ -33,7 +33,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
           width: 420,
           child: Text(
             'My Card',
-            style: AppStyless.styleSemiBold20,
+            style: AppStyless.styleSemiBold20(context),
           ),
         ),
         SizedBox(height: 20),

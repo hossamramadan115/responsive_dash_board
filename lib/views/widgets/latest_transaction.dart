@@ -12,7 +12,7 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text(
           'Latest Transaction',
-          style: AppStyless.styleMduim16,
+          style: AppStyless.styleMedium16(context),
         ),
         SizedBox(height: 16),
         LatestTransactionListView(),

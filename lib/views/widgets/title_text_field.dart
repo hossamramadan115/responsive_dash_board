@@ -13,7 +13,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyless.styleSemiBold16,
+          style: AppStyless.styleSemiBold16(context),
         ),
         CustomTexField(hint: hint),
       ],
