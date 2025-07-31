@@ -33,19 +33,31 @@ class InActiveAllExpensesItem extends StatelessWidget {
             image: itemModel.image,
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyless.styleMedium16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.title,
+              style: AppStyless.styleMedium16(context),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyless.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.date,
+              style: AppStyless.styleRegular14(context),
+            ),
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.price,
-            style: AppStyless.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.price,
+              style: AppStyless.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -66,14 +78,17 @@ class ActiveAllExpensesItem extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      padding: const EdgeInsets.all(16),
+      // padding: const EdgeInsets.all(16),
       decoration: ShapeDecoration(
         color: const Color(0xFF4DB7F2),
         shape: RoundedRectangleBorder(
+          side: const BorderSide(
+            width: 1,
+            color: const Color(0xFF4DB7F2),
+          ),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-
       child: Container(
         padding: EdgeInsets.all(16),
         decoration: ShapeDecoration(
@@ -82,7 +97,6 @@ class ActiveAllExpensesItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -92,24 +106,36 @@ class ActiveAllExpensesItem extends StatelessWidget {
               image: itemModel.image,
             ),
             const SizedBox(height: 34),
-            Text(
-              itemModel.title,
-              style: AppStyless.styleMedium16(context).copyWith(
-                color: Colors.white,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                itemModel.title,
+                style: AppStyless.styleMedium16(context).copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
             const SizedBox(height: 8),
-            Text(
-              itemModel.date,
-              style: AppStyless.styleRegular14(context).copyWith(
-                color: Color(0xffFAFAFA),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                itemModel.date,
+                style: AppStyless.styleRegular14(context).copyWith(
+                  color: Color(0xffFAFAFA),
+                ),
               ),
             ),
             const SizedBox(height: 16),
-            Text(
-              itemModel.price,
-              style: AppStyless.styleSemiBold24(context).copyWith(
-                color: Colors.white,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                itemModel.price,
+                style: AppStyless.styleSemiBold24(context).copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

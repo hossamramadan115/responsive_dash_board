@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dashboard_app/views/widgets/detailed_income_chart.dart';
 import 'package:dashboard_app/views/widgets/income_chart.dart';
 import 'package:dashboard_app/views/widgets/income_details.dart';
@@ -9,7 +11,9 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width >= 1200 && width <= 1320
+    log('📱 عرض الشاشة: $width');
+    // print('عرض الشاشة: ${width.toString()} بيكسل');
+    return width >= 1102 && width <= 1275
         ? DetailedIncomeChart()
         : Row(
             crossAxisAlignment: CrossAxisAlignment.center,
